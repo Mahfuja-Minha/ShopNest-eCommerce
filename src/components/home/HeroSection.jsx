@@ -34,7 +34,7 @@ export default function HeroSection() {
 
         <div>
           <img
-            src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SbGmy9x7AGkFuq3RB6pjCw0tON0ZeK5sUA&s"
             alt="shopping"
             className="rounded-xl shadow-lg"
           />
