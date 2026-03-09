@@ -9,7 +9,7 @@ const categories = [
     id: 2,
     name: "Fashion",
     image:
-      "https://images.unsplash.com/photo-1521335629791-ce4aec67dd53",
+      "https://nolabels.in/cdn/shop/articles/Types_of_Fashion_Styles_2_1920x.jpg?v=1704966983",
   },
   {
     id: 3,

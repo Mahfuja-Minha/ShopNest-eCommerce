@@ -5,7 +5,7 @@ const Categories = () => {
     <section className="max-w-7xl mx-auto px-6 py-20">
 
       <div className="text-center mb-14">
-        <h2 className="text-4xl font-bold">Shop by Categories</h2>
+        <h2 className="text-3xl font-bold">Shop by Categories</h2>
         <p className="text-gray-500 mt-3">
           Discover products from different categories
         </p>

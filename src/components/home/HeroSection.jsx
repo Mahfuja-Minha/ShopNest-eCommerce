@@ -34,7 +34,7 @@ export default function HeroSection() {
 
         <div>
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SbGmy9x7AGkFuq3RB6pjCw0tON0ZeK5sUA&s"
+            src="https://premconcepts.com/wp-content/uploads/2024/04/Website-DesignerDeveloper-Prem-Digital-Concepts.jpeg"
             alt="shopping"
             className="rounded-xl shadow-lg"
           />

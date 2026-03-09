@@ -1,11 +1,10 @@
 import products from "@/data/products";
+import { ArrowLeft, Star, Truck } from "lucide-react";
 import Link from "next/link";
 
 export default async function ProductDetails({ params }) {
   const { id } = await params;
-
   const product = products.find((p) => String(p.id) === id);
-  console.log(product);
 
   if (!product) {
     return (
@@ -22,41 +21,74 @@ export default async function ProductDetails({ params }) {
   }
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20">
+    <section className="max-w-7xl mx-auto px-6 py-20">
+      {/* Back */}
+      <Link
+        href="/products"
+        className="text-blue-600 flex items-center gap-2 mb-10 hover:underline"
+      >
+        <ArrowLeft size={18} /> Back to Products
+      </Link>
+
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        {/* Product Image */}
-        <div className="bg-gray-100 rounded-2xl overflow-hidden">
+        {/* Image */}
+        <div className="bg-gray-100 rounded-2xl p-6">
           <img
             src={product.image}
             alt={product.title}
-            className="w-full h-[400px] object-cover hover:scale-105 transition duration-300"
+            className="w-full h-[420px] object-cover rounded-xl hover:scale-105 transition duration-300"
           />
         </div>
 
         {/* Product Info */}
         <div>
-          <h1 className="text-4xl font-bold text-gray-800">{product.title}</h1>
+          {/* Category */}
+          {product.category && (
+            <span className="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
+              {product.category}
+            </span>
+          )}
 
-          <p className="text-2xl text-blue-600 font-semibold mt-4">
+          {/* Title */}
+          <h1 className="text-4xl font-bold mt-4 text-gray-800">
+            {product.title}
+          </h1>
+
+          {/* Rating */}
+          <div className="flex items-center gap-2 mt-3 text-yellow-500">
+            <Star size={18} fill="currentColor" />
+            <Star size={18} fill="currentColor" />
+            <Star size={18} fill="currentColor" />
+            <Star size={18} fill="currentColor" />
+            <Star size={18} />
+            <span className="text-gray-500 text-sm">(4.0 Reviews)</span>
+          </div>
+
+          {/* Price */}
+          <p className="text-3xl text-blue-600 font-bold mt-6">
             ${product.price}
           </p>
 
+          {/* Description */}
           <p className="text-gray-600 mt-6 leading-relaxed">
             {product.description}
           </p>
-
           {/* Buttons */}
           <div className="flex gap-4 mt-8">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition">
               Add to Cart
             </button>
 
-            <Link
-              href="/products"
-              className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100 transition"
-            >
-              Back
-            </Link>
+            <button className="border px-8 py-3 rounded-xl hover:bg-gray-100 transition">
+              Buy Now
+            </button>
+          </div>
+
+          {/* Delivery Info */}
+          <div className="flex items-center gap-3 text-gray-500 mt-8">
+            <Truck size={20} />
+
+            <span>Free Delivery within 3-5 days</span>
           </div>
         </div>
       </div>
