@@ -70,15 +70,20 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-2 rounded-lg hover:opacity-90 transition"
+            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:opacity-90 transition"
           >
             Login
           </button>
 
+          <div className="flex items-center justify-center gap-2 my-2">
+            <div className="h-px w-16 bg-gray-300"></div>
+            <span className="text-sm text-gray-500">or</span>
+            <div className="h-px w-16 bg-gray-300"></div>
+          </div>
           <button
             type="button"
             onClick={() => signIn("google", { callbackUrl: "/" })}
-            className="w-full border py-2 rounded-lg hover:bg-gray-100 transition"
+            className="w-full border py-2 rounded-lg hover:bg-blue-600 transition"
           >
             Continue with Google
           </button>

@@ -4,7 +4,7 @@ export default function Newsletter() {
 
       <div className="bg-gray-100 rounded-3xl py-12 px-6 text-center">
 
-        <h2 className="text-3xl font-bold">
+        <h2 className="text-3xl font-bold text-gray-600">
           Subscribe to Our Newsletter
         </h2>
 
@@ -17,7 +17,7 @@ export default function Newsletter() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="px-5 py-3 rounded-xl border outline-none w-full sm:w-80"
+            className="px-5 py-3 rounded-xl border outline-none w-full sm:w-80 text-gray-500"
           />
 
           <button

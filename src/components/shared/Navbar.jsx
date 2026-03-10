@@ -34,12 +34,19 @@ export default function Navbar() {
           <Link href="/manage-products" className="hover:text-blue-600">
             Manage Products
           </Link>
-          
+
           <Link
             href="/login"
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
           >
             Login
+          </Link>
+
+          <Link
+            href="/signup"
+            className="border border-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+          >
+            Signup
           </Link>
         </div>
 
@@ -58,6 +65,7 @@ export default function Navbar() {
           <Link href="/add-product">Add Product</Link>
           <Link href="/manage-products">Manage Products</Link>
           <Link href="/login">Login</Link>
+          <Link href="/login">Signup</Link>
 
           {/* {session ? (
             <button onClick={() => signOut()}>Logout</button>
